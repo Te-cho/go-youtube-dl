@@ -1,7 +1,7 @@
 # Go-Youtube-dl
 A GoLang library for downloading youtube subtitles and meta data using the known [Youtube-dl](https://rg3.github.io/youtube-dl/) application.
 
-![Go-youtube-dl logo](https://raw.github.com/wiki/go-sql-driver/mysql/gomysql_m.png "Golang Gopher")
+![Go-youtube-dl logo](https://golang.org/doc/gopher/appenginegopher.jpg "Golang Gopher")
 
 ---------------------------------------
 * [Features](#features)
@@ -56,8 +56,4 @@ That means:
 * You **needn't publish** the source code of your library as long as the files licensed under the MPL 2.0 are **unchanged**
 
 Please read the [MPL 2.0 FAQ](https://www.mozilla.org/en-US/MPL/2.0/FAQ/) if you have further questions regarding the license.
-
-You can read the full terms here: [LICENSE](https://raw.github.com/go-sql-driver/mysql/master/LICENSE)
-
-![Go Gopher and MySQL Dolphin](https://raw.github.com/wiki/go-sql-driver/mysql/go-mysql-driver_m.jpg "Golang Gopher transporting the MySQL Dolphin in a wheelbarrow")
 
