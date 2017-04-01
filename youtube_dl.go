@@ -9,7 +9,7 @@ type YoutubeDl struct {
 
 func (youtubedl YoutubeDl) DownloadVideo(id string) error{
 	filename := "\"" + youtubedl.Path + "/" + id + ".srt\""
-	commandParams := " --write-auto-sub --skip-download -o " + filename + " -- " + id
+	commandParams := " --write-auto-sub --skip-download --sub-lang en -o " + filename + " -- " + id
 	commandName := "youtube-dl"
 	command := commandName + " " + commandParams
 	cmd := exec.Command("bash", "-c", command)
