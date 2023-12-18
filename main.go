@@ -1,6 +1,12 @@
-package youtube_dl
+package main
 
-import "os/exec"
+
+import (
+	"bufio"
+	"flag"
+	"fmt"
+	"os/exec"
+)
 
 // Youtube-dl SRT Downloader
 type YoutubeDl struct {
@@ -17,3 +23,10 @@ func (youtubedl YoutubeDl) DownloadVideo(id string) error{
 	return err
 }
 
+func main() (
+	// Parsing command line flags
+	yid := flag.String("yid", "", "ID of the youtube video to download")
+	flag.Parse()
+
+	DownloadVideo(yid)
+)
