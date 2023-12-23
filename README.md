@@ -7,7 +7,8 @@ A GoLang library and cli for downloading audio, video and subtitles with meta da
 * [Features](#features)
 * [Requirements](#requirements)
 * [Installation](#installation)
-* [Usage](#usage)
+* [API Usage](#api-usage)
+* [CLI Usage](#cli-usage)
 * [License](#license)
 
 ---------------------------------------
