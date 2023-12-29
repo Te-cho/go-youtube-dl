@@ -65,8 +65,6 @@ func (youtubedl YoutubeDl) DownloadSubs(url string) error {
 }
 
 func (youtubedl YoutubeDl) DownloadAudio(url string) (error) {
-	// Escape and quote the path to handle spaces or special characters
-	escapedPath := "\"" + youtubedl.Path + "%(title)s-%(id)s.%(ext)s\""
 
 	cmdArgs := []string{
 		CMD,
@@ -74,7 +72,7 @@ func (youtubedl YoutubeDl) DownloadAudio(url string) (error) {
 		"--extract-audio",
 		"--audio-format", "m4a",
 		"--audio-quality", "192",
-		"--output", escapedPath,
+		"--output", youtubedl.Path + "%(title)s-%(id)s.%(ext)s\"",
 		"--write-thumbnail",
 		"--embed-thumbnail",
 		url,
@@ -91,7 +89,7 @@ func (youtubedl YoutubeDl) DownloadAudio(url string) (error) {
 func (youtubedl YoutubeDl) DownloadVideo(videoURL string) error {
 	sep := string(filepath.Separator)
 	// Escape and quote the path to handle spaces or special characters
-	escapedPath := "\"" + youtubedl.Path + sep + "%(title)s-%(id)s.%(ext)s\""
+	escapedPath := "\"" + youtubedl.Path + "%(title)s-%(id)s.%(ext)s\""
 
 	cmdArgs := []string{
 		CMD,
