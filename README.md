@@ -1,5 +1,5 @@
 # Go-Youtube-dl
-A GoLang library for downloading youtube subtitles and meta data using the known [Youtube-dl](https://rg3.github.io/youtube-dl/) application.
+A GoLang library and cli for downloading audio, video and subtitles with meta data using the known [Youtube-dl](https://rg3.github.io/youtube-dl/) application.
 
 ![Go-youtube-dl logo](https://golang.org/doc/gopher/appenginegopher.jpg "Golang Gopher")
 
@@ -7,7 +7,8 @@ A GoLang library for downloading youtube subtitles and meta data using the known
 * [Features](#features)
 * [Requirements](#requirements)
 * [Installation](#installation)
-* [Usage](#usage)
+* [API Usage](#api-usage)
+* [CLI Usage](#cli-usage)
 * [License](#license)
 
 ---------------------------------------
@@ -29,7 +30,7 @@ $ go get github.com/youtube-videos/go-youtube-dl
 ```
 Make sure [Git is installed](https://git-scm.com/downloads) on your machine and in your system's `PATH`.
 
-## Usage
+## API Usage
 Example of usage is as follow:
 ```bash
 ytdl := youtube_dl.YoutubeDl{}
@@ -41,6 +42,21 @@ if err != nil {
 ```
 Then you can handle the downloaded file in the specified path.
 
+## CLI Usage
+```
+go-youtube-dl -h
+Usage of ./go-youtube-dl:
+  -a    download audio.
+  -f string
+        Specific media format to download.
+  -p string
+        Path where you want to download. (default "/home/${USER}/Music")
+  -s    Download subs from the youtube for the specified video id
+  -v    download video.
+  -y    Find where youtube-dl is installed.
+  -yid string
+        ID of the youtube video to download subs
+```
 ---------------------------------------
 
 ## License
